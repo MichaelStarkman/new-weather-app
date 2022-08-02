@@ -1,4 +1,5 @@
 import './App.css';
+import Forecast from './Components/Forecast';
 import Inputs from './Components/Inputs';
 import TempAndDetails from './Components/TempAndDetails';
 import TimeAndLocation from './Components/TimeAndLocation';
@@ -15,6 +16,8 @@ function App() {
       
       <TimeAndLocation />
       <TempAndDetails />
+      <Forecast title="hourly forecast" />
+      <Forecast title="daily forecast" />
     </div>
   );
 }
