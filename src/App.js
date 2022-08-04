@@ -11,7 +11,7 @@ import getFormattedWeatherData from './services/weatherService';
 
 function App() {
 
-  const [query, setQuery] = useState({q: "berlin" })
+  const [query, setQuery] = useState({q: "denver" })
   const [units, setUnits] = useState("metric")
   const [weather, setWeather] = useState(null)
 
@@ -37,7 +37,7 @@ function App() {
       <div>
         <TimeAndLocation weather={weather}/>
         <TempAndDetails weather={weather}/>
-        
+
         <Forecast title="hourly forecast" />
         <Forecast title="daily forecast" />
       </div>

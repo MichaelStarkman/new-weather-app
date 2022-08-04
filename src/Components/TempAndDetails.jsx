@@ -8,21 +8,34 @@ import {
     UilSun,
     UilSunset,
 } from "@iconscout/react-unicons"
+import { iconUrlFromCode } from '../services/weatherService'
 
-function TempAndDetails() {
+function TempAndDetails({weather: {
+    details, 
+    icon, 
+    temp,
+    temp_min, 
+    temp_max, 
+    sunrise, 
+    sunset, 
+    speed, 
+    humidity, 
+    feels_like, 
+    timezone
+}}) {
   return (
     <div>
 
         <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
-            <p>Super Sunny!</p>
+            <p>{details}</p>
         </div>
         <div className="flex flex-row items-center justify-between text-white py-3">
             <img 
-            src="https://i.imgur.com/2JHPmCK.png" 
+            src={iconUrlFromCode(icon)} 
             alt="" 
             className="w-20"
             />
-            <p className="text-5xl"> 34° </p>
+            <p className="text-5xl"> {`${temp.toFixed()}°`} </p>
             <div className="flex flex-col space-y-2">
                 <div className="flex font-light text-sm items-center">
                     <UilTemperature  size={18} className="mr-1"/>
