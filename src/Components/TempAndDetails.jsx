@@ -50,7 +50,7 @@ function TempAndDetails({weather: {
                 <div className="flex font-light text-sm items-center">
                     <UilWind  size={18} className="mr-1"/>
                     Wind Speed:
-                    <span className="font-medium ml-1"> {`${speed.toFixed()}°`} </span>
+                    <span className="font-medium ml-1"> {`${speed.toFixed()}km/h`} </span>
                 </div>
             </div>
         </div>
